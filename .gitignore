@@ -7,3 +7,4 @@ db.sqlite3
 .env
 server/.env.env
 server/.env
+node_modules/
