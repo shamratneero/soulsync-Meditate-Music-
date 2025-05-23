@@ -109,16 +109,24 @@ ASGI_APPLICATION = "server.asgi.application"
 #    }
 #}
 
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'soulsync',  # Your database name
-        'USER': 'postgres',  # Default PostgreSQL user
-        'PASSWORD': '22448866',  # Your PostgreSQL password
-        'HOST': 'localhost',
-        'PORT': '5432',  # Default PostgreSQL port
-    }
+    'default': dj_database_url.config(
+        default=os.getenv('DATABASE_URL')
+    )
 }
+
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'soulsync',  # Your database name
+#        'USER': 'postgres',  # Default PostgreSQL user
+#        'PASSWORD': '22448866',  # Your PostgreSQL password
+#        'HOST': 'localhost',
+#        'PORT': '5432',  # Default PostgreSQL port
+#    }
+#}
 
 
 
