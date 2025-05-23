@@ -5,11 +5,12 @@ builder = "nixpacks"
 PORT = "8000"
 
 [phases.setup]
-nixPkgs = ["python310", "pip"]
+nixPkgs = ["python310Full"]
 
 [phases.build]
 cmds = ["pip install --upgrade pip", "pip install -r requirements.txt"]
 
 [phases.start]
 cmd = "python manage.py runserver 0.0.0.0:$PORT"
+
 
