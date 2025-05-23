@@ -1,0 +1,9 @@
+.venv/
+db.sqlite3
+# Ignore all .env files, no matter where they are
+*.env
+.env
+**/.env
+.env
+server/.env.env
+server/.env
